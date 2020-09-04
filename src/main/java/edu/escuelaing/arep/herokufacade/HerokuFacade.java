@@ -28,7 +28,7 @@ public class HerokuFacade {
                 + "</form>");
         
         get("/calcule",  (req, res) -> {           
-            return ClientBrowser.getPetition("https://heroku-calculator-arias.herokuapp.com/"+req.queryString());
+            return ClientBrowser.getPetition("https://heroku-calculator-arias.herokuapp.com/calcule"+req.queryString());
         });
     }
     
