@@ -27,8 +27,9 @@ public class HerokuFacade {
                 + "  <input type=\"submit\" value=\"Submit\">\n"
                 + "</form>");
         
-        get("/calcule",  (req, res) -> {           
-            return ClientBrowser.getPetition("https://heroku-calculator-arias.herokuapp.com/calcule/"+req.queryString());
+        get("/calcule",  (req, res) -> {         
+            System.out.println(req.queryString());
+            return ClientBrowser.getPetition("https://heroku-calculator-arias.herokuapp.com/calcule?"+req.queryString());
         });
     }
     
