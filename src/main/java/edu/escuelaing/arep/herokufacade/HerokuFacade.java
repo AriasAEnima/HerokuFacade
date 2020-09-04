@@ -17,7 +17,7 @@ public class HerokuFacade {
 
     public static void main(String[] args) {
         port(getPort());
-        get("/",(req, res) -> 
+        get("/calculadora",(req, res) -> 
                 "<h1> Calculadora Trigonometrica (Fachada)</h1>"
                 + "<form action=\"/calcule\" method=\"get\">\n"
                 + "  <label for=\"function\">Function: </label>\n"
