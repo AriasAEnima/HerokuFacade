@@ -22,7 +22,8 @@ import java.util.logging.Logger;
 public class ClientBrowser {
     
     public static void main(String[] args){
-        System.out.println(getPetition("http://localhost:4567/calcule?function=sin&number=7.5"));
+        System.out.println("Fachada: " +getPetition("https://heroku-facade-arias.herokuapp.com/calcule?function=sin&number=5"));
+        System.out.println("Real: " +getPetition("https://heroku-calculator-arias.herokuapp.com/calcule?function=tan&number=22"));
     }
     
     public static String getPetition(String urls) {
